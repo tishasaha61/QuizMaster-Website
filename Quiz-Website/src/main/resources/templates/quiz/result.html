@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Quiz Result</title>
+    <!-- Include Bootstrap CSS from CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for additional styling */
+        body {
+            padding: 20px;
+        }
+        h1 {
+            color: #007bff; /* Blue color for heading */
+            text-align: center; /* Center align heading */
+            margin-bottom: 20px; /* Add space below heading */
+        }
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745; /* Green color for score */
+        }
+        .quiz-link {
+            margin-top: 20px; /* Add space above quiz link */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KnowledgeQuest</h1> <!-- Updated heading -->
+        <h1 class="mb-4">Quiz Result</h1>
+        <p>Your Score: <span th:text="${score}" class="score"></span></p>
+        <a href="/quiz/select-subject" class="btn btn-primary quiz-link">Take Another Quiz</a>
+    </div>
+</body>
+</html>
